@@ -39,3 +39,20 @@ ON CONFLICT (id) DO UPDATE SET
     name = EXCLUDED.name,
     department_id = EXCLUDED.department_id,
     homeroom_teacher = EXCLUDED.homeroom_teacher;
+
+-- 3. Insert or update Academic Year & Internship Periods (2026/2027)
+INSERT INTO public.academic_years (id, name, is_active) VALUES
+    ('a0000000-0000-0000-0000-000000000001', '2026/2027', TRUE)
+ON CONFLICT (id) DO UPDATE SET
+    name = EXCLUDED.name,
+    is_active = EXCLUDED.is_active;
+
+INSERT INTO public.internship_periods (id, academic_year_id, name, start_date, end_date, is_active) VALUES
+    ('b0000000-0000-0000-0000-000000000001', 'a0000000-0000-0000-0000-000000000001', 'PKL Semester Ganjil 2026/2027', '2026-08-01', '2026-11-30', TRUE),
+    ('b0000000-0000-0000-0000-000000000002', 'a0000000-0000-0000-0000-000000000001', 'PKL Semester Genap 2026/2027', '2027-01-10', '2027-04-30', FALSE)
+ON CONFLICT (id) DO UPDATE SET
+    name = EXCLUDED.name,
+    start_date = EXCLUDED.start_date,
+    end_date = EXCLUDED.end_date,
+    is_active = EXCLUDED.is_active;
+

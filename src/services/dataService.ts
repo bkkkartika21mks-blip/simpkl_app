@@ -152,6 +152,15 @@ class DataService {
       setStorage('classes', this.classes);
     }
 
+    // 5. Ensure 2026/2027 periods and academic years are updated
+    const has2026Period = this.periods.some(p => p.name.includes('2026/2027'));
+    if (!has2026Period) {
+      this.academicYears = INITIAL_ACADEMIC_YEARS;
+      setStorage('academic_years', this.academicYears);
+      this.periods = INITIAL_PERIODS;
+      setStorage('periods', this.periods);
+    }
+
     this.refreshComputedStatuses();
   }
 

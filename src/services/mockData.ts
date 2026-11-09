@@ -33,30 +33,30 @@ export const INITIAL_SCHOOL_SETTINGS: SchoolSettings = {
 };
 
 export const INITIAL_ACADEMIC_YEARS: AcademicYear[] = [
-  { id: 'ay-1', name: '2024/2025', is_active: true, created_at: '2024-07-01T00:00:00Z' },
-  { id: 'ay-2', name: '2023/2024', is_active: false, created_at: '2023-07-01T00:00:00Z' },
+  { id: 'ay-1', name: '2026/2027', is_active: true, created_at: '2026-07-01T00:00:00Z' },
+  { id: 'ay-2', name: '2025/2026', is_active: false, created_at: '2025-07-01T00:00:00Z' },
 ];
 
 export const INITIAL_PERIODS: InternshipPeriod[] = [
   {
     id: 'per-1',
     academic_year_id: 'ay-1',
-    name: 'PKL Semester Ganjil 2024/2025 [DATA CONTOH]',
-    start_date: '2024-08-01',
-    end_date: '2024-11-30',
+    name: 'PKL Semester Ganjil 2026/2027',
+    start_date: '2026-08-01',
+    end_date: '2026-11-30',
     is_active: true,
-    created_at: '2024-07-15T00:00:00Z',
-    updated_at: '2024-07-15T00:00:00Z',
+    created_at: '2026-07-15T00:00:00Z',
+    updated_at: '2026-07-15T00:00:00Z',
   },
   {
     id: 'per-2',
     academic_year_id: 'ay-1',
-    name: 'PKL Semester Genap 2024/2025 [DATA CONTOH]',
-    start_date: '2025-01-10',
-    end_date: '2025-04-30',
+    name: 'PKL Semester Genap 2026/2027',
+    start_date: '2027-01-10',
+    end_date: '2027-04-30',
     is_active: false,
-    created_at: '2024-12-01T00:00:00Z',
-    updated_at: '2024-12-01T00:00:00Z',
+    created_at: '2026-12-01T00:00:00Z',
+    updated_at: '2026-12-01T00:00:00Z',
   },
 ];
 
