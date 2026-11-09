@@ -141,6 +141,17 @@ class DataService {
     ensureAccount('operator@simpkl.id', 'Operator PKL', 'operator', 'usr-op-simpkl', '081100000002');
     setStorage('users', this.users);
 
+    // 4. Ensure all user requested departments and classes are present
+    const hasAllDepts = INITIAL_DEPARTMENTS.every(initDept =>
+      this.departments.some(d => d.code === initDept.code)
+    );
+    if (!hasAllDepts) {
+      this.departments = INITIAL_DEPARTMENTS;
+      setStorage('departments', this.departments);
+      this.classes = INITIAL_CLASSES;
+      setStorage('classes', this.classes);
+    }
+
     this.refreshComputedStatuses();
   }
 

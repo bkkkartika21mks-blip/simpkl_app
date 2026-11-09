@@ -61,18 +61,32 @@ export const INITIAL_PERIODS: InternshipPeriod[] = [
 ];
 
 export const INITIAL_DEPARTMENTS: Department[] = [
+  { id: 'dept-2', code: 'TKJ 1', name: 'Teknik Komputer & Jaringan 1', head_of_department: 'Siti Rahmawati, S.T.', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-tkj2', code: 'TKJ 2', name: 'Teknik Komputer & Jaringan 2', head_of_department: 'Joko Susilo, S.T.', created_at: '2024-01-01T00:00:00Z' },
   { id: 'dept-1', code: 'RPL', name: 'Rekayasa Perangkat Lunak', head_of_department: 'Ahmad Fauzi, M.Kom.', created_at: '2024-01-01T00:00:00Z' },
-  { id: 'dept-2', code: 'TKJ', name: 'Teknik Komputer & Jaringan', head_of_department: 'Siti Rahmawati, S.T.', created_at: '2024-01-01T00:00:00Z' },
-  { id: 'dept-3', code: 'DKV', name: 'Desain Komunikasi Visual', head_of_department: 'Wahyu Pratama, S.Sn.', created_at: '2024-01-01T00:00:00Z' },
-  { id: 'dept-4', code: 'AKL', name: 'Akuntansi & Keuangan Lembaga', head_of_department: 'Dewi Lestari, S.E.', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-4', code: 'MESIN', name: 'Teknik Mesin', head_of_department: 'Bambang Supriyadi, S.T.', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-el1', code: 'ELEKTRONIKA 1', name: 'Teknik Elektronika 1', head_of_department: 'Ir. Hendra Gunawan', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-el2', code: 'ELEKTRONIKA 2', name: 'Teknik Elektronika 2', head_of_department: 'Agus Setiawan, S.T.', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-3', code: 'AVI', name: 'Audio Video', head_of_department: 'Wahyu Pratama, S.Sn.', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-tkp1', code: 'TKP 1', name: 'Teknik Konstruksi & Properti 1', head_of_department: 'Dedi Kurniawan, S.T.', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-tkp2', code: 'TKP 2', name: 'Teknik Konstruksi & Properti 2', head_of_department: 'Rudi Hartono, S.T.', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-listrik1', code: 'LISTRIK 1', name: 'Teknik Listrik 1', head_of_department: 'Tri Wahyudi, S.T.', created_at: '2024-01-01T00:00:00Z' },
+  { id: 'dept-listrik2', code: 'LISTRIK 2', name: 'Teknik Listrik 2', head_of_department: 'Eko Prasetyo, S.T.', created_at: '2024-01-01T00:00:00Z' },
 ];
 
 export const INITIAL_CLASSES: ClassRoom[] = [
+  { id: 'cls-3', department_id: 'dept-2', name: 'XII TKJ 1', grade_level: 12, homeroom_teacher: 'Joko Susilo, S.T.', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-tkj2', department_id: 'dept-tkj2', name: 'XII TKJ 2', grade_level: 12, homeroom_teacher: 'Siti Rahmawati, S.T.', created_at: '2024-07-01T00:00:00Z' },
   { id: 'cls-1', department_id: 'dept-1', name: 'XII RPL 1', grade_level: 12, homeroom_teacher: 'Sri Mulyani, S.Pd.', created_at: '2024-07-01T00:00:00Z' },
   { id: 'cls-2', department_id: 'dept-1', name: 'XII RPL 2', grade_level: 12, homeroom_teacher: 'Budi Santoso, S.Kom.', created_at: '2024-07-01T00:00:00Z' },
-  { id: 'cls-3', department_id: 'dept-2', name: 'XII TKJ 1', grade_level: 12, homeroom_teacher: 'Joko Susilo, S.T.', created_at: '2024-07-01T00:00:00Z' },
-  { id: 'cls-4', department_id: 'dept-3', name: 'XII DKV 1', grade_level: 12, homeroom_teacher: 'Anisa Kusuma, M.Ds.', created_at: '2024-07-01T00:00:00Z' },
-  { id: 'cls-5', department_id: 'dept-4', name: 'XII AKL 1', grade_level: 12, homeroom_teacher: 'Hj. Ratna Sari, S.Pd.', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-5', department_id: 'dept-4', name: 'XII MESIN 1', grade_level: 12, homeroom_teacher: 'Bambang Supriyadi, S.T.', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-el1', department_id: 'dept-el1', name: 'XII ELEKTRONIKA 1', grade_level: 12, homeroom_teacher: 'Ir. Hendra Gunawan', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-el2', department_id: 'dept-el2', name: 'XII ELEKTRONIKA 2', grade_level: 12, homeroom_teacher: 'Agus Setiawan, S.T.', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-4', department_id: 'dept-3', name: 'XII AVI 1', grade_level: 12, homeroom_teacher: 'Wahyu Pratama, S.Sn.', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-tkp1', department_id: 'dept-tkp1', name: 'XII TKP 1', grade_level: 12, homeroom_teacher: 'Dedi Kurniawan, S.T.', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-tkp2', department_id: 'dept-tkp2', name: 'XII TKP 2', grade_level: 12, homeroom_teacher: 'Rudi Hartono, S.T.', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-listrik1', department_id: 'dept-listrik1', name: 'XII LISTRIK 1', grade_level: 12, homeroom_teacher: 'Tri Wahyudi, S.T.', created_at: '2024-07-01T00:00:00Z' },
+  { id: 'cls-listrik2', department_id: 'dept-listrik2', name: 'XII LISTRIK 2', grade_level: 12, homeroom_teacher: 'Eko Prasetyo, S.T.', created_at: '2024-07-01T00:00:00Z' },
 ];
 
 export const INITIAL_SCHOOL_SUPERVISORS: SchoolSupervisor[] = [
